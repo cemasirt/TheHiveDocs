@@ -1,3 +1,12 @@
+# Installation
+## Can't create admin password 
+
+First launch of the TheHive Web GUI forces you to "Update Database" and after database creation it prompts you to create an admin password, if you miss this step you need to delete elasticsearch index to start from beginning of this step:
+
+
+    curl http://127.0.0.1:9200/_cat/indices?v
+    curl -X DELETE http://127.0.0.1:9200/the_hive_11`
+
 # Cases and Tasks
 
 - [I Can't Add a Template](https://github.com/CERT-BDF/TheHiveDocs/blob/master/FAQ.md#i-cant-add-a-template)
